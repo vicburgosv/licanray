@@ -55,13 +55,14 @@
 				echo"<form method=\"get\" action=\"editar-eliminar/quitar_alumno_del_curso.php\">";
 				echo"<input type=\"hidden\" name=\"Id\" value=\"$fila[0] $part[0] $part[1] $part[2]\" >";
 				echo"<td><input type=\"submit\" value=\"Eliminar del curso\"></td>";
-				echo"</form>";/*(victor)*/
+				echo"</form>";
 				echo"</tr>";
             }
-
-      
-
+        echo "</table>";
+        //echo"<form method=\"get\" action=\"editar-eliminar/agregar_alumno_al_curso.php\">";
+        //echo"<input type=\"hidden\" name=\"Id\" value=\"$fila[0] $part[0] $part[1] $part[2]\" >";
+        //echo"<td><input type=\"submit\" value=\"Agregar alumno\"></td>";
+        //echo"</form>";
 ?>
-
 	</head>
 </html>
