@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="title" content="Título de la WEB">
 		<meta name="description" content="Descripción de la WEB">
-		<link href="style.css" rel="stylesheet">
+		<link href="style2.css" rel="stylesheet">
 		<script src="jquery-3.4.1.min.js"></script>
 		<script src="index.js"></script>
 	</head>

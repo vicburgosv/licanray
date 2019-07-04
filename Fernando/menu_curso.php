@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="title" content="Título de la WEB">
 		<meta name="description" content="Descripción de la WEB">
-		<link href="style.css" rel="stylesheet">
+		<link href="style2.css" rel="stylesheet">
 		<script src="jquery-3.4.1.min.js"></script>
 		<script src="index.js"></script>
 	</head>
@@ -22,17 +22,22 @@
 						<div class="boton_grey">
 							<label><a href="Ingresar_Curso.php">Registrar curso</a></label>
 						</div>
-							<label>Cursos del año</label>
+						<?php
+						require('php/conexion.php');
+
+						$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
+						mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
+
+						$dateaux = "SELECT YEAR(CURRENT_TIMESTAMP)";
+						$date = mysqli_query($conexion,$dateaux) or die(mysql_error());
+						$date1 = mysqli_fetch_array($date);
+						echo "<label>Cursos del año $date1[0]</label>";
+						 ?>
 						<section id="contenedor2">
 							<?php
-							require('php/conexion.php');
-
-				      $conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
-				      mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
-
 							$sql = "SELECT *
 											FROM curso
-											WHERE ANO='2018'";
+											WHERE ANO='$date1[0]'";
 
 							$rs = mysqli_query($conexion,$sql) or die(mysql_error());
 							$numeroTuplas=mysqli_num_rows($rs);
