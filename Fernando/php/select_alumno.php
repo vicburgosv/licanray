@@ -50,6 +50,7 @@
 			for($j=0;$j<$numerocolumns;$j++){
 				echo "<td>$fila[$j]</td>";
 			}
+
 			echo "<td><form method=\"get\" action=\"php/editar-eliminar/reg-alu.php\">";
 			echo "<input type=\"hidden\" name=\"Rut\" value=\"$fila[0]\" >";
 			echo "<input type=\"submit\" value=\"Editar\">";

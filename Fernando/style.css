@@ -9,7 +9,7 @@ h1, h2, h3{
 	color: #FFFFFF;
 	font-size:30px;
 	width: 100px;
-	border-radius:8px;
+	border-radius:10px;
 	float:left;
 }
 label{
@@ -38,10 +38,11 @@ label{
 }
 .cuerpo_center{
 	background: #FFFFFF;
-	width: 1150px;
-	border-radius:8px;
+	width: 1200px;
 	height: 500px;
-	margin-left:95px;
+	border-radius:8px;
+	margin:auto;
+	overflow:scroll;
 }
 .cuerpo_right{
 	background: #FFFFFF;
