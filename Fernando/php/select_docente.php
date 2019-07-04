@@ -1,5 +1,5 @@
 <div align="center">
-	<table>
+	<table border = '1'>
 		<tr>
 			<td>
 				Rut
