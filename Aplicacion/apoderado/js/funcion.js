@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$.ajax({
 			type: 'POST',
 			url: link,
-			data: {'tipo': tipo, 'rut': rut},
+			data: {'rut': rut},
 			success: function(respuesta){
 				$('#result').html(respuesta)
 			}
