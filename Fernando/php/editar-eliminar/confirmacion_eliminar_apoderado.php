@@ -15,7 +15,7 @@
 	<body>
 		<p>Estás seguro que deseas eliminar el registro del apoderado de rut: <?php echo"$rut"?> ?</p>
 		<br>
-		<?php 	echo"<form method=\"get\" action=\"accion/eliminar3.php\">";
+		<?php 	echo"<form method=\"get\" action=\"accion/eliminar_apoderado.php\">";
 				echo"<input type=\"hidden\" name=\"rut\" value=\"$rut\" >";
 				echo"<td><input type=\"submit\" value=\"Sí, Eliminar\"></td>";
 				echo"</form> ";

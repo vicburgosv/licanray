@@ -56,7 +56,7 @@
 								 	text-align: center;
 								 	width: 400px;
 								 	height: 100px;
-								 	border-radius:8px;\" value=\"$fila[1]\">";
+								 	border-radius:8px;\" value=\"$fila[1] $fila[2]\">";
 								 echo "</form>";
 	 							 echo "</div>";
 			                }

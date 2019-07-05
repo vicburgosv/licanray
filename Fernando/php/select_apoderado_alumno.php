@@ -13,31 +13,13 @@
 			<td>
 				Apellido Materno
 			</td>
-			<td>
-				Sexo
-			</td>
-			<td>
-				Telefono
-			</td>
-			<td>
-				Correo
-			</td>
-			<td>
-				N de Calle
-			</td>
-			<td>
-				Calle
-			</td>
-			<td>
-				Comuna
-			</td>
 		</tr>
 <?php
 	require('conexion.php');
 		$Busqueda = $_POST['valorBusqueda'];
 		$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
 		mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
-		$sql = "SELECT *
+		$sql = "SELECT Rut_apoderado, Nombre, Apellido_paterno, Apellido_materno
 				From apoderado
 				Where Nombre Like '%$Busqueda%' OR Apellido_paterno Like '%$Busqueda%' OR Apellido_materno Like '%$Busqueda%'";
 		$rs = mysqli_query($conexion,$sql) or die(mysql_error());
@@ -50,15 +32,11 @@
 			for($j=0;$j<$numerocolumns;$j++){
 				echo "<td>$fila[$j]</td>";
 			}
-			echo "<td><form method=\"get\" action=\"php/editar-eliminar/reg-apo.php\">";
-			echo "<input type=\"hidden\" name=\"Rut\" value=\"$fila[0]\" >";
-			echo "<input type=\"submit\" value=\"Editar\">";
+			$Rut=$_POST['valorRut'];
+			echo "<td><form method=\"get\" action=\"php/tipo_parentesco.php\">";
+			echo "<input type=\"hidden\" name=\"Ruts\" value=\"$Rut $fila[0]\" >";
+			echo "<input type=\"submit\" value=\"Agregar\">";
 			echo "</form></td>";
-			echo "<td><form method=\"get\" action=\"php/editar-eliminar/confirmacion_eliminar_apoderado.php\">";
-			echo "<input type=\"hidden\" name=\"Rut\" value=\"$fila[0]\" >";
-			echo "<input type=\"submit\" value=\"Eliminar\">";
-			echo "</form></td>";
-			echo "</tr>";
         }
 ?>
 </table>

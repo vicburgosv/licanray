@@ -13,7 +13,6 @@
     <form action="php/insert_curso.php" method="get">
        <h1 align="center">Ingresar:</h1>
        <h2> Curso </h2>
-       <input type="text"  name="Ano" placeholder="Año" />
        <input type="text" name="Nivel" placeholder="Nivel" />
 			 <input type="text" name="Seccion" placeholder="Seccion" />
        <br><br>

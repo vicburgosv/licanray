@@ -58,6 +58,10 @@
 			echo "<input type=\"hidden\" name=\"Rut\" value=\"$fila[0]\" >";
 			echo "<input type=\"submit\" value=\"Eliminar\">";
 			echo "</form></td>";
+			echo "<td><form method=\"get\" action=\"agregar_apoderado_a_alumno.php\">";
+			echo "<input type=\"hidden\" name=\"Rut\" value=\"$fila[0]\" >";
+			echo "<input type=\"submit\" value=\"Agregar Apoderado\">";
+			echo "</form></td>";
 			echo "</tr>";
         }
 ?>
