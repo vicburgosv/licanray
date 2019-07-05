@@ -1,5 +1,5 @@
 body{
-	background:url(../imagenes/fondo.jpg);
+	background:url(../../imagenes/fondo.jpg);
 }
 h1, h2, h3{
 	color: #000;

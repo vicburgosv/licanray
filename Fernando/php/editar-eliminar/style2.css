@@ -40,8 +40,7 @@ label{
 	width: 1000px;
 	border-radius:8px;
 	height: 500px;
-	margin: auto;
-	overflow: scroll;
+	margin-left:150px;
 }
 .cuerpo_right{
 	background: #FFFFFF;

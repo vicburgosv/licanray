@@ -1,5 +1,5 @@
 <?php
-  require('../conexion.php');
+  require('conexion.php');
     $Id = $_GET['Id'];
     $part = explode(" ", $Id);
 

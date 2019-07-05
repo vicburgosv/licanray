@@ -7,7 +7,7 @@
       <header>
         <h2 align="center">Alumnos</h1>
       </header>
-      <table border=1 align="center">
+      <table border=1 align="center" bgcolor="#FFFFFF">
         <tr>
 					<td>
 						Rut
@@ -43,24 +43,20 @@
     for($i=0;$i<$numeroTuplas;$i++)
     {
        $fila=mysqli_fetch_array($rs);
-			 echo"<form method=\"get\" action=\"editar-eliminar/reg-alu.php\">";
        echo"<tr>";
-			 echo"<input type=\"hidden\" name=\"Rut\" value=\"$fila[0]\" >";
        for($j=0;$j<$numerocolumns;$j++)
         {
        echo "<td>$fila[$j]</td>";
         }
-				echo"<td><input type=\"submit\" value=\"Editar\"></td>";
-				echo"</form>";
-				echo"<form method=\"get\" action=\"editar-eliminar/quitar_alumno_del_curso.php\">";
+				echo"<td><form method=\"get\" action=\"../quitar_alumno_del_curso.php\">";
 				echo"<input type=\"hidden\" name=\"Id\" value=\"$fila[0] $part[0] $part[1] $part[2]\" >";
-				echo"<td><input type=\"submit\" value=\"Eliminar del curso\"></td>";
-				echo"</form>";
+				echo"<input type=\"submit\" value=\"Eliminar del curso\">";
+				echo"</form></td>";
 				echo"</tr>";
             }
         echo "</table>";
-        //echo"<form method=\"get\" action=\"editar-eliminar/agregar_alumno_al_curso.php\">";
-        //echo"<input type=\"hidden\" name=\"Id\" value=\"$fila[0] $part[0] $part[1] $part[2]\" >";
+        //echo"<form method=\"get\" action=\"../agregar_alumno_al_curso.php\">";
+        //echo"<input type=\"hidden\" name=\"Id\" value=\"$part[0] $part[1] $part[2]\" >";
         //echo"<td><input type=\"submit\" value=\"Agregar alumno\"></td>";
         //echo"</form>";
 ?>

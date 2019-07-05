@@ -1,2 +1,0 @@
-# licanray
-sistema del colegio

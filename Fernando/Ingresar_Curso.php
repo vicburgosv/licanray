@@ -6,8 +6,6 @@
 		<meta name="title" content="Título de la WEB">
 		<meta name="description" content="Descripción de la WEB">
 		<link href="style2.css" rel="stylesheet">
-		<script src="jquery-3.4.1.min.js"></script>
-		<script src="index.js"></script>
 	</head>
   <body>
 
@@ -17,7 +15,7 @@
        <h2> Curso </h2>
        <input type="text"  name="Ano" placeholder="Año" />
        <input type="text" name="Nivel" placeholder="Nivel" />
-       <input type="text" name="Seccion" placeholder="Seccion" />
+			 <input type="text" name="Seccion" placeholder="Seccion" />
        <br><br>
        <select name="Rut_docente">
 

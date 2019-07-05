@@ -46,7 +46,7 @@
 			        {
 			           $fila=mysqli_fetch_array($rs);
 								 echo "<div>";
-								 echo "<form method=\"get\" action=\"php/alumnos_curso.php\">";
+								 echo "<form method=\"get\" action=\"php/editar-eliminar/reg-cur.php\">";
 								 echo "<input type=\"hidden\" name=\"Id\" value=\"$fila[0] $fila[1] $fila[2]\" >";
 								 echo "<input type=\"submit\" style=\"
 								  font-size : 40px;
@@ -57,13 +57,15 @@
 								 	width: 400px;
 								 	height: 100px;
 								 	border-radius:8px;\" value=\"$fila[1]\">";
-	 							 //echo  "<font size=10>$fila[0]</font>";
 								 echo "</form>";
 	 							 echo "</div>";
 			                }
 							?>
 
 						</section>
+					</div>
+					<div class="boton_grey">
+						<label style="font-size:22px"><a href="Consulta_Curso.php">Datos cursos de años anteriores</a></label>
 					</div>
 				</div>
 
