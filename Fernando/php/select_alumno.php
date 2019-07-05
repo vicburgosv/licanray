@@ -55,7 +55,7 @@
 			echo "<input type=\"hidden\" name=\"Rut\" value=\"$fila[0]\" >";
 			echo "<input type=\"submit\" value=\"Editar\">";
 			echo "</form></td>";
-			echo "<td><form method=\"get\" action=\"php/editar-eliminar/confirmacion_eliminar_alumno.php\">";
+			echo "<td><form method=\"get\" action=\"php/e/confirmacion_eliminar_alumno.php\">";
 			echo "<input type=\"hidden\" name=\"Rut\" value=\"$fila[0]\" >";
 			echo "<input type=\"submit\" value=\"Eliminar\">";
 			echo "</form></td>";

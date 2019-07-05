@@ -37,16 +37,19 @@ label{
 }
 .cuerpo_center{
 	background: #FFFFFF;
-	width: 1000px;
+	width: 1250px;
 	border-radius:8px;
 	height: 500px;
-	margin-left:150px;
+	margin:auto;
+	overflow:scroll;
 }
 .cuerpo_right{
 	background: #FFFFFF;
-	width: 1000px;
+	width: 1200px;
 	border-radius:8px;
 	height: 500px;
+	margin:auto;
+	overflow:scroll;
 }
 .boton_white{
 	margin-top: 10px;
