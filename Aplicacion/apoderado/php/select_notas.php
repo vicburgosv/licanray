@@ -40,7 +40,7 @@
 
     $sql = "SELECT alumno.Rut_alumno, alumno.Nombre,alumno.Apellido_paterno,alumno.Apellido_materno,evaluacion.Asignatura,evaluacion.nota
            From evaluacion,alumno,pertenece
-           Where evaluacion.ANO='2018' AND alumno.Rut_alumno=Evaluacion.Rut_alumno AND pertenece.RUT_ALUMNO = alumno.RUT_ALUMNO AND pertenece.ANO = '2019' AND alumno.Rut_alumno = '$Rut' AND N_evaluacion=1" ;
+           Where evaluacion.ANO='2019' AND alumno.Rut_alumno=Evaluacion.Rut_alumno AND pertenece.RUT_ALUMNO = alumno.RUT_ALUMNO AND pertenece.ANO = '2019' AND alumno.Rut_alumno = '$Rut' AND N_evaluacion=1" ;
     $rs = mysqli_query($conexion,$sql) or die(mysql_error());
     $numeroTuplas=mysqli_num_rows($rs);
     $numerocolumns=mysqli_num_fields($rs);
@@ -76,14 +76,14 @@
         {
           $sql = "SELECT evaluacion.nota
                   From evaluacion,pertenece
-                  Where  evaluacion.Rut_alumno = '$Rut' AND evaluacion.N_evaluacion = $j AND evaluacion.Asignatura = '$fila[Asignatura]' AND evaluacion.Rut_alumno = pertenece.RUT_ALUMNO AND pertenece.ANO = '2019' AND evaluacion.ANO = '2018'";
+                  Where  evaluacion.Rut_alumno = '$Rut' AND evaluacion.N_evaluacion = $j AND evaluacion.Asignatura = '$fila[Asignatura]' AND evaluacion.Rut_alumno = pertenece.RUT_ALUMNO AND pertenece.ANO = '2019' AND evaluacion.ANO = '2019'";
           $rs2 = mysqli_query($conexion,$sql) or die(mysql_error());
           $notaadicional = mysqli_fetch_array($rs2);
           echo "<td>$notaadicional[0]</td>";
         }
         $sql5 = "SELECT round(AVG(evaluacion.nota),2)
                 From evaluacion,pertenece
-                Where evaluacion.Rut_alumno = '$Rut' AND evaluacion.Asignatura = '$fila[Asignatura]' AND evaluacion.Rut_alumno = pertenece.RUT_ALUMNO AND pertenece.ANO = '2019' AND evaluacion.ANO = '2018'";
+                Where evaluacion.Rut_alumno = '$Rut' AND evaluacion.Asignatura = '$fila[Asignatura]' AND evaluacion.Rut_alumno = pertenece.RUT_ALUMNO AND pertenece.ANO = '2019' AND evaluacion.ANO = '2019'";
         $rs5 = mysqli_query($conexion,$sql5) or die(mysql_error());
         $promedio = mysqli_fetch_array($rs5);
         echo "<td>$promedio[0]</td>";
