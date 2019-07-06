@@ -11,7 +11,9 @@
 	</head>
 	<body>
 		<header>
-			 <div class="volver" align="center"><a href="index.html">Volver</a></div> <h1 align="center">Sistema de Info-registro</h1>
+			<div class="volver" align="center" ><a href="index.html" style = 'color:blue'>Volver</a></div>
+			<br>
+			<h1 align="center">Sistema de Info-registro</h1>
 			<h2 align="center">Cursos</h1>
 		</header>
 		<main>
