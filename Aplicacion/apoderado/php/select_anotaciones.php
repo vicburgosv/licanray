@@ -1,10 +1,25 @@
+<html lang="es">
+  <head>
+    <title>Promedio</title>
+    <meta charset="utf-8">
+    <link href="../../style2.css" rel="stylesheet">
+  </head>
+
+  <header>
+			<h1 align="center">Registro de notas</h1>
+	</header>
+
+  <body>
+  <div class="cuerpo_center" align="center">
+
 <?php
 	$ano='2019';
 	require('conexion.php');
 	$rut = $_POST['rut'];
 	$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
 	mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
-	
+
+
 	$sql = "SELECT CONTADOR,TIPO,DESCRIPCION,FECHA,Nombre,Apellido_paterno
 			From anotacion,docente
 			Where RUT_ALUMNO='$rut' and YEAR(FECHA)='$ano'
@@ -31,7 +46,7 @@
 						<td>
 							DOCENTE
 						</td>
-					</tr>	
+					</tr>
 		";
 		for($i=0;$i<$numeroTuplas;$i++){
 			$fila=mysqli_fetch_array($rs);
@@ -56,5 +71,9 @@
 	else{
 		echo "No se registran anotaciones para su pupilo";
 	}
-	
-?>		
+
+
+?>
+</div>
+</body>
+</html>

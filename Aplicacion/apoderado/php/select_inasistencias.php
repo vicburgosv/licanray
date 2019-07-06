@@ -1,10 +1,25 @@
+<html lang="es">
+  <head>
+    <title>Promedio</title>
+    <meta charset="utf-8">
+    <link href="../../style2.css" rel="stylesheet">
+  </head>
+
+  <header>
+			<h1 align="center">Registro de notas</h1>
+	</header>
+
+  <body>
+  <div class="cuerpo_center" align="center">
+
+
 <?php
 	$ano='2019';
 	require('conexion.php');
 	$rut = $_POST['rut'];
 	$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
 	mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
-	
+
 	$sql = "SELECT FECHA
 			From inasistencia
 			Where RUT_ALUMNO='$rut' and YEAR(FECHA)='$ano'
@@ -12,7 +27,7 @@
 	$rs = mysqli_query($conexion,$sql) or die(mysql_error());
 	$numeroTuplas=mysqli_num_rows($rs);
 	$numerocolumns=mysqli_num_fields($rs);
-	
+
 	if($numeroTuplas!=0){
 		echo"
 			<div align=\"left\">
@@ -24,7 +39,7 @@
 						<td>
 							FECHA
 						</td>
-					</tr>			
+					</tr>
 		";
 		for($i=0;$i<$numeroTuplas;$i++){
 			$fila=mysqli_fetch_array($rs);
@@ -32,16 +47,19 @@
 			echo "<tr>";
 			echo "<td align=\"center\">$j</td>";
 			echo "<td align=\"center\">$fila[0]</td>";
-			echo "</tr>";		
+			echo "</tr>";
 		}
 		echo"
 			</table>
 			<p>Recuerde justificar las inasistencia de su pupilo.</p>
-		</div>		
+		</div>
 		";
 	}
 	else{
 		echo"No se registrar inasistecias para su pupilo";
 	}
-?>		
- 
+?>
+
+</div>
+</body>
+</html>
