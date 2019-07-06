@@ -22,7 +22,7 @@
 					<br>
 					<div id="botones">
 						<div class="boton_grey">
-							<label><a href="Ingresar_Curso.php">Registrar curso</a></label>
+							<label><a href="Ingresar_Curso.php" style = 'color:blue'>Registrar curso</a></label>
 						</div>
 						<?php
 						require('php/conexion.php');

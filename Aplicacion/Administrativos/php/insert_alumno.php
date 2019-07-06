@@ -24,4 +24,5 @@
         echo "Debe completar todos campos.";
     }
 ?>
+<br>
 <a href="../menu.html">volver</a>

@@ -11,17 +11,32 @@
 	</head>
 	<body>
 		<header>
-			 <div class="volver" align="center"><a href="menu.html">Volver</a></div> <h1 align="center">Sistema de Info-registro</h1>
+			 <div class="volver" align="center"><a href="menu.html" style='color:blue'>Volver</a></div>
+			 <br>
+			 <h1 align="center">Sistema de Info-registro</h1>
 			<h2 align="center">Apoderados</h1>
 		</header>
 		<main>
 			<div id="contenedor" >
 				<div class="cuerpo_center" align="center">
 					<br>
-					<div align='left'>Asigne el apoderado para el alumno<?php
+					<div align='center'>Asigne el apoderado para el alumno<?php
 					require('php/conexion.php');
 					$Rut = $_GET['Rut'];
-					echo "$Rut";
+					$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
+			    mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
+			    if (!$conexion) {
+			      echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
+			      echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;
+			      echo "error de depuración: " . mysqli_connect_error() . PHP_EOL;
+			      exit;}
+					$sqlaux = "SELECT Nombre,Apellido_Paterno,Apellido_Materno
+										 From Alumno
+										 WHERE Rut_alumno = '$Rut'";
+					$rsaux = mysqli_query($conexion,$sqlaux) or die(mysqli_error());
+					$Nom = mysqli_fetch_array($rsaux);
+
+					echo " $Nom[0] $Nom[1] $Nom[2]";
 					?></div>
 					<form action="Registrar_apoderado_a_alumno.php">
 					<?php echo "<input type=\"hidden\" name=\"Rut\" value=\"$Rut\">" ?>
