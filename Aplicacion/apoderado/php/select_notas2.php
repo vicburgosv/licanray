@@ -5,7 +5,7 @@
 	$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
 	mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
 	
-	$sql = "SELECT FECHA
+	$sql = "SELECT 
 			From inasistencia
 			Where RUT_ALUMNO='$rut' and YEAR(FECHA)='$ano'
 			ORDER BY FECHA";
@@ -17,14 +17,7 @@
 		echo"
 			<div align=\"left\">
 				<table>
-					<tr>
-						<td>
-							NUMERO
-						</td>
-						<td>
-							FECHA
-						</td>
-					</tr>			
+		
 		";
 		for($i=0;$i<$numeroTuplas;$i++){
 			$fila=mysqli_fetch_array($rs);

@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="es">  
 	<head>    
-		<title>Info-registro: Apoderados</title>    
+		<title>Info-registro: Docentes</title>    
 		<meta charset="UTF-8">
 		<meta name="title" content="Título de la WEB">
 		<meta name="description" content="Descripción de la WEB">    
@@ -23,7 +23,7 @@
 			<div class="salir" align="center" style="visibility: hidden">  <a href="../index_start.html"> Salir </a></div> 
 			<h1 align="center">Sistema de Info-registro</h1>
 			<h1 align="center">Escuela Licanray</h1>
-			<h2 align="center">Apoderados</h2>
+			<h2 align="center">Docentes</h2>
 			<hr/>			
 		</header>    
 		<main>

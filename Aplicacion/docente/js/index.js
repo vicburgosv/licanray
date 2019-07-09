@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	$(document).on('submit','#formulario',function(){
 		event.preventDefault();
+		console.log('hola');
+		console.log($(this).serialize());
 		$.ajax({
 			type: 'POST',
 			url: 'php/login.php',
