@@ -1,7 +1,7 @@
 body{
 	background:url(../../imagenes/fondo.jpg);
 }
-h1, h2, h3{
+h1, h2{
 	color: #FFFFFF;
 }
 a{
@@ -13,6 +13,19 @@ a{
 	color: #FFFFFF;
 	font-size:30px;
 	width: 100px;
+	border-radius:8px;
+	float:left;
+}
+label.dos{
+	width: 45px;
+	font-size:15px;
+	
+}
+.volver_small{
+	background:#0B0B61;
+	color: #FFFFFF;
+	font-size:15px;
+	width: 45px;
 	border-radius:8px;
 	float:left;
 }

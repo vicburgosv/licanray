@@ -82,7 +82,7 @@
 						
 					</div>
 					<div class="mensaje">
-						<span>Los datos se han actualizado correctamente</span>
+						<span>La base de datos se han actualizado correctamente</span>
 					</div>
 				</div>
 			</div>

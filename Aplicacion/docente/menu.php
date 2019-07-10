@@ -32,7 +32,7 @@
 		<meta name="description" content="Descripción de la WEB">    
 		<link href="css/style.css" rel="stylesheet">
 		<script src="js/jquery-3.4.1.min.js"></script>
-		<script src="js/botones.js"></script>		
+		<script src="js/botones_cursos.js"></script>		
 	</head>  
 	<body>    
 		<header>
