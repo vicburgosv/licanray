@@ -11,9 +11,7 @@
 	</head>
 	<body>
 		<header>
-			<div class="volver" align="center"> <a href="index.html"> Volver </a></div>
-			<br>
-			<h1 align="center">Sistema de Info-registro</h1>
+			 <div class="volver" align="center"><a href="index.html">Volver</a></div> <h1 align="center">Sistema de Info-registro</h1>
 			<h2 align="center">Cursos</h1>
 		</header>
 		<main>
@@ -22,7 +20,7 @@
 					<br>
 					<div id="botones">
 						<div class="boton_grey">
-							<label><a href="Ingresar_Curso.php" style = 'color:blue'>Registrar curso</a></label>
+							<label><a href="Ingresar_Curso.php">Registrar curso</a></label>
 						</div>
 						<?php
 						require('php/conexion.php');
@@ -58,7 +56,7 @@
 								 	text-align: center;
 								 	width: 400px;
 								 	height: 100px;
-								 	border-radius:8px;\" value=\"$fila[1] $fila[2]\">";
+								 	border-radius:8px;\" value=\"$fila[1]\">";
 								 echo "</form>";
 	 							 echo "</div>";
 			                }
@@ -67,7 +65,7 @@
 						</section>
 					</div>
 					<div class="boton_grey">
-						<label style="font-size:22px"><a href="Consulta_Curso.php" style = 'color:blue'>Datos cursos de años anteriores</a></label>
+						<label style="font-size:22px"><a href="Consulta_Curso.php">Datos cursos de años anteriores</a></label>
 					</div>
 				</div>
 

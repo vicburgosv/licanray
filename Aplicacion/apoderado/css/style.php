@@ -1,0 +1,73 @@
+body{
+	background:url(../../imagenes/fondo.jpg);
+}
+h1, h2, h3{
+	color: #FFFFFF;
+}
+.volver{
+	background:#0B0B61;
+	color: #FFFFFF;
+	font-size:30px;
+	width: 100px;
+	border-radius:8px;
+	float:left;
+}
+label{
+	font-size:30px;
+}
+#contenedor{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-star;
+	align-items: stretch;
+	flex-wrap: nowrap;
+}
+.cuerpo_left{
+	background: #FFFFFF;
+	width: 350px;
+	border-radius:8px;
+	height: 500px;
+	margin-right:20px;
+}
+.cuerpo_right{
+	background: #FFFFFF;
+	width: 1000px;
+	border-radius:8px;
+	height: 500px;
+}
+.boton_white{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #FFFFFF;
+	text-align: center;
+	width: 300px;
+	height: 50px;
+	border-radius:8px;
+}
+.boton_grey{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #D8D8D8;
+	text-align: center;
+	width: 300px;
+	height: 50px;
+	border-radius:8px;
+}
+.boton_grey_active{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #848484;
+	text-align: center;
+	width: 300px;
+	height: 50px;
+	border-radius:8px;
+}
+.boton_red{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #FF0000;
+	text-align: center;
+	width: 300px;
+	height: 50px;
+	border-radius:8px;
+}
