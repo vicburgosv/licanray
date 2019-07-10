@@ -7,8 +7,8 @@
       <header>
         <h2 align="center">Alumnos</h1>
       </header>
-      <table border=1 align="center" bgcolor="#FFFFFF">
-        <tr>
+      <table border=1 align="center" style = "border-collapse: collapse;" bgcolor = 'D5D6F8'>
+        <tr bgcolor="03065D" style="font-weight: bold; color:white">
 					<td>
 						Rut
 					</td>
@@ -55,10 +55,6 @@
 				echo"</tr>";
             }
         echo "</table>";
-        //echo"<form method=\"get\" action=\"../agregar_alumno_al_curso.php\">";
-        //echo"<input type=\"hidden\" name=\"Id\" value=\"$part[0] $part[1] $part[2]\" >";
-        //echo"<td><input type=\"submit\" value=\"Agregar alumno\"></td>";
-        //echo"</form>";
 ?>
 	</head>
 </html>

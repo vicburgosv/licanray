@@ -101,6 +101,7 @@
 				<button class='boton'>Alumnos</button>
 				<div style="margin-left: 50px; margin-top: 20px;" id="result">
 				</div>
+				<p><a href="../../menu_curso.php" style="color:#FFFFFF;">Volver</p>
 			</div>
 		</main>
 	</body>

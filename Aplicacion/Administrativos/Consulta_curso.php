@@ -88,6 +88,6 @@
 	 </select>
        <input type="submit" value= "Enviar"/>
     </form></div>
-
+<p><a href="menu_curso.php" style="color:#FFFFFF;">Volver</p>
   </body>
 </html>

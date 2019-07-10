@@ -2,6 +2,7 @@
   <head>
     <title>Alumnos del curso</title>
     <meta charset="utf-8">
+    <link href="../style2.css" rel="stylesheet">
   </head>
     <body>
       <header>
@@ -23,8 +24,8 @@
           echo "<h2 align=\"center\">Profesor Jefe $fila[0] $fila[1] $fila[2]</h2>"?>
         <h3 align="center">Alumnos</h3>
       </header>
-      <table border=1 align="center">
-        <tr>
+      <table border=1 align="center" style = "border-collapse: collapse;" bgcolor = 'D5D6F8'>
+        <tr bgcolor="03065D" style="font-weight: bold; color:white">
 					<td>
 						Rut
 					</td>
@@ -63,6 +64,6 @@
             }
         echo "</table>";
 ?>
-<p><a href="../Consulta_curso.php">Volver</p>
+<p><a href="../Consulta_curso.php" style="color:#FFFFFF;">Volver</p>
 	</head>
 </html>
