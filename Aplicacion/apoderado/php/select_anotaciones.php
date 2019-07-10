@@ -5,9 +5,9 @@
 	$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
 	mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
 	
-	$sql = "SELECT CONTADOR,TIPO,DESCRIPCION,FECHA,Nombre,Apellido_paterno
+	$sql = "SELECT CONTADOR,TIPO,DESCRIPCION,ANO,Nombre,Apellido_paterno
 			From anotacion,docente
-			Where RUT_ALUMNO='$rut' and YEAR(FECHA)='$ano'
+			Where RUT_ALUMNO='$rut' and ANO='$ano'
 			GROUP BY CONTADOR";
 	$rs = mysqli_query($conexion,$sql) or die(mysql_error());
 	$numeroTuplas=mysqli_num_rows($rs);
@@ -26,7 +26,7 @@
 							DESCRIPCION
 						</td>
 						<td>
-							FECHA
+							AÑO
 						</td>
 						<td>
 							DOCENTE
