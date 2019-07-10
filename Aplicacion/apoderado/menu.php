@@ -8,7 +8,7 @@
 		//header('Location: iniciar.php');
 	}
 	else{
-		//header('Location: iniciar.php');
+		header('Location: iniciar.php');
 	}
 	require('php/conexion.php');
 	$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");

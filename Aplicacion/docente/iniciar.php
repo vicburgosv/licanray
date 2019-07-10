@@ -2,7 +2,7 @@
 	session_start();
 	if(isset($_SESSION['usuario'])){
 		$nombre=$_SESSION['usuario'];
-		//header('Location: menu.php');
+		header('Location: menu.php');
 	}
 ?>
 
@@ -28,11 +28,11 @@
 		</header>    
 		<main>
 			<div align="center" >
-				<h3>Ingrese sus datos</h3>
+				<h2>Ingrese sus datos</h2>
 				<form action="" id="formulario">
 					<input type="text" name="rut" title="Ingrese su rut" placeholder="Rut" required>
 					<br>
-					<input type="text" name="pass" title="Ingrese su contraseña" placeholder="Contraseña" required>
+					<input type="password" name="pass" title="Ingrese su contraseña" placeholder="Contraseña" required>
 					<br>
 					<br>
 					<input type="submit" class="botonlog" value="Ingresar">

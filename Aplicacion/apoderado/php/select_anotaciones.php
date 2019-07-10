@@ -7,7 +7,7 @@
 	
 	$sql = "SELECT CONTADOR,TIPO,DESCRIPCION,ANO,Nombre,Apellido_paterno
 			From anotacion,docente
-			Where RUT_ALUMNO='$rut' and ANO='$ano'
+			Where RUT_ALUMNO='$rut' and ANO='$ano' AND anotacion.RUT_DOCENTE=docente.RUT_DOCENTE
 			GROUP BY CONTADOR";
 	$rs = mysqli_query($conexion,$sql) or die(mysql_error());
 	$numeroTuplas=mysqli_num_rows($rs);

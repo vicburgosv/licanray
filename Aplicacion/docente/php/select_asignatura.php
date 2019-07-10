@@ -28,7 +28,7 @@
 		echo"
 			<div align=\"center\">
 				<table>
-					<tr><td>N°</td><td>Rut</td><td>Nota 1</td><td>Nota 2</td><td>Nota 3</td><td>Nota 4</td><td>Nota 5</td><td>Nota 6</td><td>Nota 7</td><td>Nota 8</td><td>Nota 9</td><td>Nota 10</td>
+					<tr><td>N°</td><td>Rut</td><td>Nombre</td><td>Apellido P</td><td>Apellido M</td><td>Nota 1</td><td>Nota 2</td><td>Nota 3</td><td>Nota 4</td><td>Nota 5</td><td>Nota 6</td><td>Nota 7</td><td>Nota 8</td><td>Nota 9</td><td>Nota 10</td>
 					</tr>
 		";
 		for($i=0;$i<$numeroTuplas;$i++){
@@ -42,9 +42,20 @@
 			$cantidad_nota=count($notas);
 			$cantidad_nota=$cantidad_nota+1;
 			$j=$i+1;
+			
+			
+			
+			$sql3 = "SELECT nombre, apellido_paterno, apellido_materno
+					From alumno
+					Where RUT_ALUMNO='$fila[0]' ";
+			$sq3 = mysqli_query($conexion,$sql3) or die(mysql_error());			
+			$nombres_pila=mysqli_fetch_array($sq3);
 			echo "<tr>";
 			echo "<td align=\"center\">$j</td>";
 			echo "<td align=\"center\">$fila[0]</td>";
+			echo "<td align=\"center\">$nombres_pila[0]</td>";
+			echo "<td align=\"center\">$nombres_pila[1]</td>";
+			echo "<td align=\"center\">$nombres_pila[2]</td>";
 			echo "<td align=\"center\"> <input size=\"1px\" id=\"$fila[0]\" class=\"nota1\" name=\"1!$fila[0]\" value=\"\"> </td>";
 			echo "<td align=\"center\"> <input size=\"1px\" id=\"$fila[0]\" class=\"nota2\" name=\"2!$fila[0]\" value=\"\"> </td>";
 			echo "<td align=\"center\"> <input size=\"1px\" id=\"$fila[0]\" class=\"nota3\" name=\"3!$fila[0]\" value=\"\"> </td>";

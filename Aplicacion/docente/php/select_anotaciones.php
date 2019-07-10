@@ -17,24 +17,34 @@
 	$numeroTuplas=mysqli_num_rows($rs);
 	
 	$numerocolumns=mysqli_num_fields($rs);
-	echo"<p align=\"center\">Lista de Clases</p>";
+	echo"<p align=\"center\">Lista de Clases: Anotaciones</p>";
 ?>
 
 <?php
 	if($numeroTuplas!=0){
 		echo"
-			<div align=\"center\">
+			<div align=\"left\">
 				<table>
-					<tr><td>N°</td><td>Rut</td>
+					<tr><td>N°</td><td>Rut</td><td>Nombre</td><td>Apellido P</td><td>Apellido M</td>
 					</tr>
 		";
 		for($i=0;$i<$numeroTuplas;$i++){
 			$fila=mysqli_fetch_array($rs);
+			
+			$sql3 = "SELECT nombre, apellido_paterno, apellido_materno
+					From alumno
+					Where RUT_ALUMNO='$fila[0]' ";
+			$sq3 = mysqli_query($conexion,$sql3) or die(mysql_error());			
+			$nombres_pila=mysqli_fetch_array($sq3);
+			
 			$j=$i+1;
 			echo "<tr>";
 			echo "<td align=\"center\">$j</td>";
 			echo "<td align=\"center\">$fila[0]</td>";
-			echo "<td align=\"center\"><button class=\"registrar\">Registrar Anotacion</button></td>";
+			echo "<td align=\"center\">$nombres_pila[0]</td>";
+			echo "<td align=\"center\">$nombres_pila[1]</td>";
+			echo "<td align=\"center\">$nombres_pila[2]</td>";
+			echo "<td align=\"center\"><button class=\"registrar\">Ver/Registrar</button></td>";
 			echo "</tr>";
 		}
 		echo"
@@ -52,7 +62,7 @@
 <br>
 <script>
 	$('.registrar').on('click',function(){
-		var rut = $(this).parent().prev().text();
+		var rut = $(this).parent().prev().prev().prev().prev().text();
 		console.log(rut);
         $.ajax({
             type: "POST",

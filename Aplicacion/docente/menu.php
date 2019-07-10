@@ -8,7 +8,7 @@
 		//header('Location: iniciar.php');
 	}
 	else{
-		//header('Location: iniciar.php');
+		header('Location: iniciar.php');
 	}
 	require('php/conexion.php');
 	$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
@@ -46,10 +46,10 @@
 		</header>    
 		<main>
 			<div align="center" >
-			<h3>Cursos <?php echo"$ano"?></h3>
+			<h2>Cursos <?php echo"$ano"?></h2>
 				
 					<div id="botones">
-					<section id="contenedor_cursos">
+					<section>
 						<?php
 						if($numeroTuplas==0){
 							echo "No se ha ingresado un curso";
@@ -63,8 +63,8 @@
 							}
 						}
 						?>
+					</section>
 					</div>
-				</section>	
 			</div>
 			<div>
 				<form action="curso.php" method="get" id="myForm">
